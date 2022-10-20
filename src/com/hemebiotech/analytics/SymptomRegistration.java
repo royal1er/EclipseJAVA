@@ -18,14 +18,13 @@ public class SymptomRegistration implements ISymptomAnalysis{
 	public TreeMap<String, Integer> generateOutput(ArrayList<String> list){
 		TreeMap<String, Integer> tmap = new TreeMap<String, Integer>();
 		try {
-			Object[] objects = list.toArray();
-				for (int i = 0; i < list.size(); i++) {
-					Integer c = tmap.get(objects[i]);
-		            if (tmap.get(objects[i]) == null) {
-		            	tmap.put((String) objects[i], 1);
+				for (String symptoms : list) {
+					Integer n = tmap.get(symptoms);
+		            if (n == null) {
+		            	tmap.put((String) symptoms, 1);
 		            }
 		            else {
-		              tmap.put((String) objects[i], ++c);
+		              tmap.put((String) symptoms, ++n);
 		            }
 				}
 		} catch (Exception e) {

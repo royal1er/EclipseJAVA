@@ -14,7 +14,6 @@ public class AnalyticsCounter {
 	
 	public static void main(String args[]) throws Exception {
 
-		mydata.GetSymptomData("symptoms.txt");
 		System.out.println(data.generateOutput(mydata.GetSymptomData("symptoms.txt")));
 		outputFile.getFileOutput(data.generateOutput(mydata.GetSymptomData("symptoms.txt")), "results.out");		
 		

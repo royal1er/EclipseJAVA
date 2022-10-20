@@ -19,7 +19,7 @@ public class GenerateFile implements ISymptomFile {
 		try {
 			FileWriter writer = new FileWriter (nameFile);
 			for (Map.Entry<String,Integer> m:tmap.entrySet()) {
-        	writer.write("Frequency of " + m.getKey() + " is " + m.getValue()+"\n");
+        	writer.write(m.getKey() + " : " + m.getValue()+"\n");
 			}
 			writer.close();
 			}
